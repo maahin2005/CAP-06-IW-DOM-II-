@@ -42,17 +42,18 @@
     let display_1 = document.getElementById("display_1");
 
     let BMI = weight.value / (height.value * height.value);
+    BMI = BMI * 10000;
 
-    display.innerText = "Your BMI Result : " + BMI;
+    display.innerText = "Your BMI Result is : " + BMI;
 
     if (BMI <= 18.4) {
-      display_1.innerText = "Under Weight";
+      display_1.innerText = "which means you are Under Weight";
     } else if (BMI >= 18.5 && BMI <= 24.9) {
-      display_1.innerText = "Normal Weight";
+      display_1.innerText = "which means you are Normal Weight";
     } else if (BMI >= 25 && BMI <= 29.9) {
-      display_1.innerText = "Over Weight";
+      display_1.innerText = "which means you are Over Weight";
     } else {
-      display_1.innerText = "Obese";
+      display_1.innerText = "which means you are Obese";
     }
   }
 </script>
